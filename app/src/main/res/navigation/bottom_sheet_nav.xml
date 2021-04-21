@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/bottom_sheet_nav"
+            app:startDestination="@id/bottom_sheet_fragment_1">
+
+    <fragment
+            android:id="@+id/bottom_sheet_fragment_1"
+            android:name="com.treefuerza.bottomsheetnavigation.BottomSheetFragment1"
+            android:label="fragment_bottom_sheet_1"
+            tools:layout="@layout/fragment_bottom_sheet_1">
+        <action
+                android:id="@+id/action_bottom_sheet_fragment_1_to_bottomSheetTransition2"
+                app:destination="@id/bottomSheetTransition2"/>
+    </fragment>
+    <fragment
+            android:id="@+id/bottomSheetTransition2"
+            android:name="com.treefuerza.bottomsheetnavigation.BottomSheetTransition2"
+            android:label="fragment_bottom_sheet_transition_2"
+            tools:layout="@layout/fragment_bottom_sheet_transition_2">
+        <action
+                android:id="@+id/action_bottomSheetTransition2_to_bottomSheetTransition3"
+                app:destination="@id/bottomSheetTransition3"/>
+    </fragment>
+    <fragment
+            android:id="@+id/bottomSheetTransition3"
+            android:name="com.treefuerza.bottomsheetnavigation.BottomSheetTransition3"
+            android:label="fragment_bottom_sheet_transition_3"
+            tools:layout="@layout/fragment_bottom_sheet_transition_3">
+        <action
+                android:id="@+id/action_bottomSheetTransition3_to_bottom_sheet_fragment_1"
+                app:destination="@id/bottom_sheet_fragment_1"/>
+    </fragment>
+</navigation>
